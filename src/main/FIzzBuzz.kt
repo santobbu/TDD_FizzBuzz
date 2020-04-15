@@ -1,6 +1,10 @@
 package main
 
 class FizzBuzz {
+    fun execute(numbers: Array<Int>): String? {
+        return numbers.joinToString(separator = ", ") { processNumber(it).toString() }
+    }
+
     fun processNumber(number: Int): String? {
         if (isDividedByThree(number) && isDividedByFive(number)) {
             return "FizzBuzz";

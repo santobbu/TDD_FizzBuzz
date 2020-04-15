@@ -28,4 +28,10 @@ class FizzBuzzTest {
         assertEquals("Buzz", fizzBuzz.processNumber(10))
         assertEquals("FizzBuzz", fizzBuzz.processNumber(15));
     }
+
+    @Test
+    fun shouldExecuteListOfNumberCorrectly() {
+        assertEquals("1", fizzBuzz.execute(arrayOf<Int>(1)))
+        assertEquals("1, 2", fizzBuzz.execute(arrayOf<Int>(1, 2)))
+    }
 }
