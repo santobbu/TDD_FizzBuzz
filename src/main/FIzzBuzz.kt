@@ -2,18 +2,26 @@ package main
 
 class FizzBuzz {
     fun processNumber(number: Int): String? {
-        if (number % 3 == 0 && number % 5 == 0) {
+        if (isDividedByThree(number) && isDividedByFive(number)) {
             return "FizzBuzz";
         }
 
-        if (number % 3 == 0) {
+        if (isDividedByThree(number)) {
             return "Fizz";
         }
 
-        if (number % 5 == 0) {
+        if (isDividedByFive(number)) {
             return "Buzz";
         }
 
         return number.toString()
+    }
+
+    private fun isDividedByThree (number: Int): Boolean {
+        return number % 3 == 0
+    }
+
+    private fun isDividedByFive (number: Int): Boolean {
+        return number % 5 == 0
     }
 }
